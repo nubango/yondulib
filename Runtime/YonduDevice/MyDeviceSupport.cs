@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Layouts;
 
-namespace CustomeDevice
+namespace YondulibDevice
 {
     public static class ThirdPartyAPI
     {
@@ -66,7 +66,7 @@ namespace CustomeDevice
         {
             // Add a match that catches any Input Device that reports its
             // interface as "ThirdPartyAPI".
-            InputSystem.RegisterLayout<MyDevice>(
+            InputSystem.RegisterLayout<YonduDevice>(
                 matches: new InputDeviceMatcher()
                     .WithInterface("ThirdPartyAPI"));
         }

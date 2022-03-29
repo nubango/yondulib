@@ -1,0 +1,15 @@
+{
+  "name": "com.nugo.yondulib",
+  "version": "1.1.1",
+  "displayName": "yondulib",
+  "description": "yondulib for Unity",
+  "unity": "2020.3",
+  "unityRelease": "5f1",
+  "dependencies": {
+    "com.unity.inputsystem": "1.0.2"
+ },
+  "authors": {
+    "author1": "Nuria Bango Iglesias",
+    "author2": "Gonzalo Alba Duran"
+  }
+}

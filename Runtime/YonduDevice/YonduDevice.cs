@@ -10,7 +10,7 @@ using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem.Utilities;
 
-namespace CustomeDevice
+namespace YondulibDevice
 {
 
 
@@ -30,7 +30,7 @@ namespace CustomeDevice
     // If it's important for the memory format to match 1:1 at the binary level
     // to an external representation, it's generally advisable to use
     // LayoutLind.Explicit.
-    public struct MyDeviceState : IInputStateTypeInfo
+    public struct YonduDeviceState : IInputStateTypeInfo
     {
         // You must tag every state with a FourCC code for type
         // checking. The characters can be anything. Choose something that allows
@@ -67,13 +67,13 @@ namespace CustomeDevice
     // as a layout.
     // The most common use of InputControlLayoutAttribute is to direct the system
     // to a custom "state struct" through the `stateType` property. See below for details.
-    [InputControlLayout(displayName = "My Device", stateType = typeof(MyDeviceState))]
+    [InputControlLayout(displayName = "YonduDevice", stateType = typeof(YonduDeviceState))]
     // Add the InitializeOnLoad attribute to automatically run the static
     // constructor of the class after each C# domain load.
 #if UNITY_EDITOR
     [InitializeOnLoad]
 #endif
-    public class MyDevice : InputDevice
+    public class YonduDevice : InputDevice
     {
         // In the state struct, you added two Controls that you now want to
         // surface on the Device, for convenience. The Controls
@@ -98,29 +98,29 @@ namespace CustomeDevice
             whistle = GetChildControl<ButtonControl>("whistle");
         }
 
-        static MyDevice()
+        static YonduDevice()
         {
             // RegisterLayout() adds a "Control layout" to the system.
             // These can be layouts for individual Controls (like sticks)
             // or layouts for entire Devices (which are themselves
             // Controls) like in our case.
-            InputSystem.RegisterLayout<MyDevice>();
+            InputSystem.RegisterLayout<YonduDevice>();
         }
 
 
         // Revisar porque este metodo no sale en la docuemntacion oficial
-        [MenuItem("Tools/Add MyDevice")]
+        [MenuItem("Tools/Add YonduDevice")]
         public static void Initialize()
         {
-            InputSystem.AddDevice<MyDevice>();
+            InputSystem.AddDevice<YonduDevice>();
         }
 
         // Acceder rápidamente al último dispositivo utilizado de un tipo
         // determinado o enumerar todos los dispositivos de un tipo específico
-        public static MyDevice current { get; private set; }
+        public static YonduDevice current { get; private set; }
 
-        public static IReadOnlyList<MyDevice> All => s_AllMyDevices;
-        private static List<MyDevice> s_AllMyDevices = new List<MyDevice>();
+        public static IReadOnlyList<YonduDevice> All => s_AllYonduDevices;
+        private static List<YonduDevice> s_AllYonduDevices = new List<YonduDevice>();
         
         public override void MakeCurrent()
         {
@@ -131,13 +131,13 @@ namespace CustomeDevice
         protected override void OnAdded()
         {
             base.OnAdded();
-            s_AllMyDevices.Add(this);
+            s_AllYonduDevices.Add(this);
         }
 
         protected override void OnRemoved()
         {
             base.OnRemoved();
-            s_AllMyDevices.Remove(this);
+            s_AllYonduDevices.Remove(this);
         }
     }
 }

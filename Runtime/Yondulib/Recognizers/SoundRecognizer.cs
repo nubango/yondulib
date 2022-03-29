@@ -161,11 +161,11 @@ namespace YonduLib.Recognizers
         {
             // TODO: tal vez habria que tratar el valor de freq para que se adecue a el formato de cada evento
             InputEventPtr eventPtr;
-            using (StateEvent.From(CustomeDevice.MyDevice.current, out eventPtr))
+            using (StateEvent.From(YondulibDevice.YonduDevice.current, out eventPtr))
             {
                 string buttonName = name.ToString().ToLower();
 
-                InputControl ic = CustomeDevice.MyDevice.current[buttonName];
+                InputControl ic = YondulibDevice.YonduDevice.current[buttonName];
 
                 ((ButtonControl)ic).WriteValueIntoEvent(freq, eventPtr);
                 //if (name == EventName.Click)

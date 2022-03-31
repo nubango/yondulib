@@ -5424,13 +5424,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7279796982563314049}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 092bf3b983af64d85be968602701f933, type: 3}
+  m_Script: {fileID: 11500000, guid: c700091e06f299848b07dce4b401ff30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
   rotateSpeed: 60
   burstSpeed: 10
-  projectile: {fileID: 1050929111787496, guid: 4be9e6cdd2d5d499ca5c16cc83fdf790, type: 3}
+  projectile: {fileID: 1050929111787496, guid: 513138de15a8dde409f1a619a441af4d, type: 3}
 --- !u!4 &7283255547635044647
 Transform:
   m_ObjectHideFlags: 0

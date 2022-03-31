@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/yondulib-package-structure/Samples/SimpleControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Samples/yondulib/1.1.1/FPS Shooter Demo/SimpleControls.inputactions'
 
 using System;
 using System.Collections;

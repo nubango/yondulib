@@ -15,5 +15,12 @@
   "authors": {
     "author1": "Nuria Bango Iglesias",
     "author2": "Gonzalo Alba Duran"
-  }
+  },
+  "samples": [
+        {
+            "displayName": "FPS Shooter Demo",
+            "description": "Demo con silbido para avanzar y chasquido para disparar",
+            "path": "Samples~/ShooterDemo"
+        }
+    ]
 }

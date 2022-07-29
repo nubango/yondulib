@@ -28,6 +28,14 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "550d4ca0-9535-4aea-bb14-0e871a1ad4f0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -46,21 +54,10 @@
                     "name": "",
                     "id": "53582a77-8aa4-421f-86a3-b962dcf9cb5f",
                     "path": "<YonduDevice>/click",
-                    "interactions": "Press",
+                    "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "",
                     "action": "fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e1b8c4dd-7b3a-4db6-a93a-0889b59b1afc",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "move",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -133,10 +130,10 @@
                 {
                     "name": "up",
                     "id": "b8d6fe91-4280-4024-a9da-efd9932f1752",
-                    "path": "<YonduDevice>/whistle",
+                    "path": "<YonduDevice>/whistle/up",
                     "interactions": "",
-                    "processors": "AxisDeadzone",
-                    "groups": "",
+                    "processors": "",
+                    "groups": "Yondu Device Scheme",
                     "action": "move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -144,7 +141,7 @@
                 {
                     "name": "down",
                     "id": "551f36e5-2f88-4d6b-a541-e3c5dd131dc3",
-                    "path": "",
+                    "path": "<YonduDevice>/whistle/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -155,7 +152,7 @@
                 {
                     "name": "left",
                     "id": "b2f4eece-43c9-4e53-861b-0f07c9190562",
-                    "path": "",
+                    "path": "<YonduDevice>/whistle/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -166,7 +163,7 @@
                 {
                     "name": "right",
                     "id": "4d5e5c02-8d41-4023-ba8f-90596f6c5314",
-                    "path": "",
+                    "path": "<YonduDevice>/whistle/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -176,21 +173,21 @@
                 },
                 {
                     "name": "",
-                    "id": "c106d6e6-2780-47ff-b318-396171bd54cc",
-                    "path": "<Gamepad>/rightStick",
+                    "id": "38595deb-6def-44de-bc2e-e939495264d8",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "look",
+                    "action": "move",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "578caa03-6827-4797-adfc-a59770c437fe",
-                    "path": "<Pointer>/delta",
+                    "id": "c106d6e6-2780-47ff-b318-396171bd54cc",
+                    "path": "<Gamepad>/rightStick",
                     "interactions": "",
-                    "processors": "ScaleVector2(x=2,y=2)",
+                    "processors": "",
                     "groups": "",
                     "action": "look",
                     "isComposite": false,
@@ -206,9 +203,54 @@
                     "action": "fire",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "50ba43f8-c419-4a59-a20a-c11d76912f18",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Yondu Device Scheme",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "578caa03-6827-4797-adfc-a59770c437fe",
+                    "path": "<Pointer>/delta",
+                    "interactions": "",
+                    "processors": "ScaleVector2(x=2,y=2)",
+                    "groups": "Yondu Device Scheme",
+                    "action": "look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
     ],
-    "controlSchemes": []
+    "controlSchemes": [
+        {
+            "name": "Yondu Device Scheme",
+            "bindingGroup": "Yondu Device Scheme",
+            "devices": [
+                {
+                    "devicePath": "<YonduDevice>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "PS4",
+            "bindingGroup": "PS4",
+            "devices": [
+                {
+                    "devicePath": "<DualShockGamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
 }

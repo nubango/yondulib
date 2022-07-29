@@ -8,7 +8,7 @@ namespace YonduLib.Core.Driver
     //
     // A simple implementation of a ring buffer
     //
-    // Note that this class is non-thread safe. The owner class should take
+    // YonduNote that this class is non-thread safe. The owner class should take
     // care of race conditions.
     //
     public sealed class RingBuffer

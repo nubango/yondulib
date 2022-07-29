@@ -6,34 +6,22 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Layouts;
 
-namespace YondulibDevice
+namespace YonduLibDevice
 {
-    public static class ThirdPartyAPI
+    public static class YonduDeviceManager
     {
         // This example assumes that the argument is a string that
         // contains the name of the Device, and that no two Devices
         // have the same name in the external API.
-        public static Action<string> deviceAdded;
-        public static Action<string> deviceRemoved;
+        public static Action<string> yonduDeviceAdded;
+        public static Action<string> yonduDeviceRemoved;
     }
 
     // This example uses a MonoBehaviour with [ExecuteInEditMode]
     // on it to run the setup code. You can do this many other ways.
-    //[ExecuteInEditMode]
-    public class MyDeviceSupport : MonoBehaviour
+    [ExecuteInEditMode]
+    public class YonduDeviceSupport : MonoBehaviour
     {
-        protected void OnEnable()
-        {
-            ThirdPartyAPI.deviceAdded += OnDeviceAdded;
-            ThirdPartyAPI.deviceRemoved += OnDeviceRemoved;
-        }
-
-        protected void OnDisable()
-        {
-            ThirdPartyAPI.deviceAdded -= OnDeviceAdded;
-            ThirdPartyAPI.deviceRemoved -= OnDeviceRemoved;
-        }
-
         private void OnDeviceAdded(string name)
         {
             // Feed a description of the Device into the system. In response, the
@@ -41,8 +29,9 @@ namespace YondulibDevice
             InputSystem.AddDevice(
                 new InputDeviceDescription
                 {
-                    interfaceName = "ThirdPartyAPI",
-                    product = name
+                    interfaceName = "YonduLib",
+                    product = name,
+                    manufacturer = "UCM"
                 });
         }
 
@@ -51,10 +40,11 @@ namespace YondulibDevice
             var device = InputSystem.devices.FirstOrDefault(
                 x => x.description == new InputDeviceDescription
                 {
-                    interfaceName = "ThirdPartyAPI",
+                    interfaceName = "YonduLib",
                     product = name,
+                    manufacturer = "UCM"
                 });
-
+            
             if (device != null)
                 InputSystem.RemoveDevice(device);
         }
@@ -68,7 +58,10 @@ namespace YondulibDevice
             // interface as "ThirdPartyAPI".
             InputSystem.RegisterLayout<YonduDevice>(
                 matches: new InputDeviceMatcher()
-                    .WithInterface("ThirdPartyAPI"));
+                    .WithInterface("YonduDeviceManager"));
+
+            YonduDeviceManager.yonduDeviceAdded += OnDeviceAdded;
+            YonduDeviceManager.yonduDeviceRemoved += OnDeviceRemoved;
         }
     }
 }

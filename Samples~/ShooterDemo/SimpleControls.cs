@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Samples/yondulib/1.1.1/FPS Shooter Demo/SimpleControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scenes/Simple Demo/SimpleControls.inputactions'
 
 using System;
 using System.Collections;
@@ -41,6 +41,14 @@ public class @SimpleControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""New action"",
+                    ""type"": ""Button"",
+                    ""id"": ""550d4ca0-9535-4aea-bb14-0e871a1ad4f0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -59,21 +67,10 @@ public class @SimpleControls : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""53582a77-8aa4-421f-86a3-b962dcf9cb5f"",
                     ""path"": ""<YonduDevice>/click"",
-                    ""interactions"": ""Press"",
+                    ""interactions"": ""Press(behavior=1)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""fire"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""e1b8c4dd-7b3a-4db6-a93a-0889b59b1afc"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -146,10 +143,10 @@ public class @SimpleControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""up"",
                     ""id"": ""b8d6fe91-4280-4024-a9da-efd9932f1752"",
-                    ""path"": ""<YonduDevice>/whistle"",
+                    ""path"": ""<YonduDevice>/whistle/up"",
                     ""interactions"": """",
-                    ""processors"": ""AxisDeadzone"",
-                    ""groups"": """",
+                    ""processors"": """",
+                    ""groups"": ""Yondu Device Scheme"",
                     ""action"": ""move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -157,7 +154,7 @@ public class @SimpleControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""551f36e5-2f88-4d6b-a541-e3c5dd131dc3"",
-                    ""path"": """",
+                    ""path"": ""<YonduDevice>/whistle/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -168,7 +165,7 @@ public class @SimpleControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""b2f4eece-43c9-4e53-861b-0f07c9190562"",
-                    ""path"": """",
+                    ""path"": ""<YonduDevice>/whistle/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -179,7 +176,7 @@ public class @SimpleControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""4d5e5c02-8d41-4023-ba8f-90596f6c5314"",
-                    ""path"": """",
+                    ""path"": ""<YonduDevice>/whistle/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -189,21 +186,21 @@ public class @SimpleControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""c106d6e6-2780-47ff-b318-396171bd54cc"",
-                    ""path"": ""<Gamepad>/rightStick"",
+                    ""id"": ""38595deb-6def-44de-bc2e-e939495264d8"",
+                    ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""look"",
+                    ""action"": ""move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""578caa03-6827-4797-adfc-a59770c437fe"",
-                    ""path"": ""<Pointer>/delta"",
+                    ""id"": ""c106d6e6-2780-47ff-b318-396171bd54cc"",
+                    ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
-                    ""processors"": ""ScaleVector2(x=2,y=2)"",
+                    ""processors"": """",
                     ""groups"": """",
                     ""action"": ""look"",
                     ""isComposite"": false,
@@ -219,17 +216,63 @@ public class @SimpleControls : IInputActionCollection, IDisposable
                     ""action"": ""fire"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""50ba43f8-c419-4a59-a20a-c11d76912f18"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Yondu Device Scheme"",
+                    ""action"": ""New action"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""578caa03-6827-4797-adfc-a59770c437fe"",
+                    ""path"": ""<Pointer>/delta"",
+                    ""interactions"": """",
+                    ""processors"": ""ScaleVector2(x=2,y=2)"",
+                    ""groups"": ""Yondu Device Scheme"",
+                    ""action"": ""look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""Yondu Device Scheme"",
+            ""bindingGroup"": ""Yondu Device Scheme"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<YonduDevice>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""PS4"",
+            ""bindingGroup"": ""PS4"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<DualShockGamepad>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
         // gameplay
         m_gameplay = asset.FindActionMap("gameplay", throwIfNotFound: true);
         m_gameplay_fire = m_gameplay.FindAction("fire", throwIfNotFound: true);
         m_gameplay_move = m_gameplay.FindAction("move", throwIfNotFound: true);
         m_gameplay_look = m_gameplay.FindAction("look", throwIfNotFound: true);
+        m_gameplay_Newaction = m_gameplay.FindAction("New action", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -282,6 +325,7 @@ public class @SimpleControls : IInputActionCollection, IDisposable
     private readonly InputAction m_gameplay_fire;
     private readonly InputAction m_gameplay_move;
     private readonly InputAction m_gameplay_look;
+    private readonly InputAction m_gameplay_Newaction;
     public struct GameplayActions
     {
         private @SimpleControls m_Wrapper;
@@ -289,6 +333,7 @@ public class @SimpleControls : IInputActionCollection, IDisposable
         public InputAction @fire => m_Wrapper.m_gameplay_fire;
         public InputAction @move => m_Wrapper.m_gameplay_move;
         public InputAction @look => m_Wrapper.m_gameplay_look;
+        public InputAction @Newaction => m_Wrapper.m_gameplay_Newaction;
         public InputActionMap Get() { return m_Wrapper.m_gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -307,6 +352,9 @@ public class @SimpleControls : IInputActionCollection, IDisposable
                 @look.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnLook;
                 @look.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnLook;
                 @look.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnLook;
+                @Newaction.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnNewaction;
+                @Newaction.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnNewaction;
+                @Newaction.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnNewaction;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -320,14 +368,36 @@ public class @SimpleControls : IInputActionCollection, IDisposable
                 @look.started += instance.OnLook;
                 @look.performed += instance.OnLook;
                 @look.canceled += instance.OnLook;
+                @Newaction.started += instance.OnNewaction;
+                @Newaction.performed += instance.OnNewaction;
+                @Newaction.canceled += instance.OnNewaction;
             }
         }
     }
     public GameplayActions @gameplay => new GameplayActions(this);
+    private int m_YonduDeviceSchemeSchemeIndex = -1;
+    public InputControlScheme YonduDeviceSchemeScheme
+    {
+        get
+        {
+            if (m_YonduDeviceSchemeSchemeIndex == -1) m_YonduDeviceSchemeSchemeIndex = asset.FindControlSchemeIndex("Yondu Device Scheme");
+            return asset.controlSchemes[m_YonduDeviceSchemeSchemeIndex];
+        }
+    }
+    private int m_PS4SchemeIndex = -1;
+    public InputControlScheme PS4Scheme
+    {
+        get
+        {
+            if (m_PS4SchemeIndex == -1) m_PS4SchemeIndex = asset.FindControlSchemeIndex("PS4");
+            return asset.controlSchemes[m_PS4SchemeIndex];
+        }
+    }
     public interface IGameplayActions
     {
         void OnFire(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnNewaction(InputAction.CallbackContext context);
     }
 }

@@ -9,7 +9,7 @@ namespace YonduLib
     /// <summary>
     /// Clase que alberga una frecuencia y su intensidad.
     /// </summary>
-    public class Note : System.IComparable
+    public class YonduNote : System.IComparable
     {
         /// <summary>
         /// Intensidad de la frecuencia. El valor oscila entre 0 y 1.
@@ -21,7 +21,7 @@ namespace YonduLib
         /// </summary>
         public int frequency;
 
-        public Note(float i, int f)
+        public YonduNote(float i, int f)
         {
             intensity = i;
             frequency = f;
@@ -40,8 +40,8 @@ namespace YonduLib
         public int CompareTo(object obj)
         {
             int val = 0;
-            if (((Note)obj).intensity < intensity) val = 1;
-            else if (((Note)obj).intensity > intensity) val = -1;
+            if (((YonduNote)obj).intensity < intensity) val = 1;
+            else if (((YonduNote)obj).intensity > intensity) val = -1;
 
             return val;
         }

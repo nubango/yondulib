@@ -3,9 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace YonduLib
+namespace YonduLib.Utils
 {
-    // code from: https://gist.github.com/paralleltree/31045ab26f69b956052c
     public class PriorityQueue<T> where T : IComparable
     {
         private List<T> list;

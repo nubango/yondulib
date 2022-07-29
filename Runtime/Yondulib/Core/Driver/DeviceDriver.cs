@@ -32,7 +32,7 @@ namespace YonduLib.Core.Driver
 
         public static InputStream OpenInputStream(int deviceIndex)
         {
-            // Note: The ownership of the device object will be transferred to
+            // YonduNote: The ownership of the device object will be transferred to
             // the input stream object.
             var stream = new InputStream(Context.GetInputDevice(deviceIndex));
 

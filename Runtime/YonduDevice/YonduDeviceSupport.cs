@@ -19,7 +19,6 @@ namespace YonduLibDevice
 
     // This example uses a MonoBehaviour with [ExecuteInEditMode]
     // on it to run the setup code. You can do this many other ways.
-    [ExecuteInEditMode]
     public class YonduDeviceSupport : MonoBehaviour
     {
         private void OnDeviceAdded(string name)
@@ -58,10 +57,12 @@ namespace YonduLibDevice
             // interface as "ThirdPartyAPI".
             InputSystem.RegisterLayout<YonduDevice>(
                 matches: new InputDeviceMatcher()
-                    .WithInterface("YonduDeviceManager"));
+                    .WithInterface("YonduLib"));
 
             YonduDeviceManager.yonduDeviceAdded += OnDeviceAdded;
             YonduDeviceManager.yonduDeviceRemoved += OnDeviceRemoved;
+
+            YonduDeviceManager.yonduDeviceAdded("Yondu Device 1");
         }
     }
 }

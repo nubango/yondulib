@@ -154,7 +154,9 @@ namespace YonduLibDevice
 
 
         // Revisar porque este metodo no sale en la docuemntacion oficial
+#if UNITY_EDITOR
         [MenuItem("Tools/Add YonduDevice")]
+#endif
         public static void Initialize()
         {
             InputSystem.AddDevice<YonduDevice>();

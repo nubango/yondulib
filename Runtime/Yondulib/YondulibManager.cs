@@ -35,11 +35,6 @@ namespace YonduLib
     {
         #region Unity implementation
 
-        //DEBUG
-        public float xf;
-        public float yf;
-        //DEBUG
-
         public YonduSpectrumAnalyzer analyzer;
 
 
@@ -68,8 +63,6 @@ namespace YonduLib
 
         private void InitInformation()
         {
-            YonduLibDevice.YonduDeviceManager.yonduDeviceAdded("Yondu Device 1");
-
             if (analyzer == null)
                 Debug.LogError("Atributo YonduSpectrumAnalyzer no asignado en el componente YondulibManager");
 

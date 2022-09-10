@@ -52,8 +52,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1074124777361689318}
-  - component: {fileID: 2778748518988239288}
   - component: {fileID: 3569247490513230693}
+  - component: {fileID: 2778748518988239288}
   m_Layer: 0
   m_Name: YondulibManager
   m_TagString: Untagged
@@ -76,23 +76,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2778748518988239288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3587216191304740736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a19f07ce02a31b4d8e6d5967de20685, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  analyzer: {fileID: 1074124776564333530}
-  medidorPrefab: {fileID: 1102223686866165526, guid: 22fa7a0d38f7d6a4fac273f453922e75, type: 3}
-  canvas: {fileID: 0}
-  activeMedidores: 1
-  deviceSelector: {fileID: 0}
 --- !u!114 &3569247490513230693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,3 +88,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b4a01ca8b29314c9ba8acfb9088c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2778748518988239288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3587216191304740736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a19f07ce02a31b4d8e6d5967de20685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xf: 0
+  yf: 0
+  analyzer: {fileID: 1074124776564333530}
+  medidorPrefab: {fileID: 1102223686866165526, guid: 22fa7a0d38f7d6a4fac273f453922e75, type: 3}
+  canvas: {fileID: 0}
+  activeMedidores: 1
+  deviceSelector: {fileID: 0}

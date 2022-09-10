@@ -18,7 +18,7 @@ public class SimpleController_UsingActionAsset : MonoBehaviour
     {
         m_Controls = new SimpleControls();
 
-        m_Controls.gameplay.fire.performed +=
+        m_Controls.Gameplay.Fire.performed +=
             ctx =>
         {
             if (ctx.interaction is SlowTapInteraction)
@@ -31,13 +31,13 @@ public class SimpleController_UsingActionAsset : MonoBehaviour
             }
             m_Charging = false;
         };
-        m_Controls.gameplay.fire.started +=
+        m_Controls.Gameplay.Fire.started +=
             ctx =>
         {
             if (ctx.interaction is SlowTapInteraction)
                 m_Charging = true;
         };
-        m_Controls.gameplay.fire.canceled +=
+        m_Controls.Gameplay.Fire.canceled +=
             ctx =>
         {
             m_Charging = false;
@@ -62,8 +62,8 @@ public class SimpleController_UsingActionAsset : MonoBehaviour
 
     public void Update()
     {
-        var look = m_Controls.gameplay.look.ReadValue<Vector2>();
-        var move = m_Controls.gameplay.move.ReadValue<Vector2>();
+        var look = m_Controls.Gameplay.Look.ReadValue<Vector2>();
+        var move = m_Controls.Gameplay.Move.ReadValue<Vector2>();
 
         // Update orientation first, then move. Otherwise move orientation will lag
         // behind by one frame.

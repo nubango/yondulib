@@ -56,7 +56,6 @@ namespace YonduLib
 
         private void TransferInfo()
         {
-            _instance.analyzer = analyzer;
             _instance.medidorPrefab = medidorPrefab;
             _instance.canvas = canvas;
         }
@@ -133,7 +132,7 @@ namespace YonduLib
 
         private void OnDestroy()
         {
-            _streamManager.Dispose();
+            _streamManager?.Dispose();
         }
 
         #endregion

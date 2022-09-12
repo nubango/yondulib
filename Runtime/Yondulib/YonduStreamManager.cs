@@ -87,7 +87,7 @@ namespace YonduLib
 
             if (GameObject.FindObjectOfType<YonduDeviceSelector>() == null)
                 //Debug.Log("No se ha encontrado ningun Device selector");
-                OpenStreamOnDevice(1);
+                OpenStreamOnDevice(DeviceDriver.DeviceCount > 0 ? DeviceDriver.DefaultDeviceIndex + 1 : 0);
         }
 
         /// <summary>

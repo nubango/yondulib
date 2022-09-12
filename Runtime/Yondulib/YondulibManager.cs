@@ -133,7 +133,6 @@ namespace YonduLib
 
         private void OnDestroy()
         {
-            YonduLibDevice.YonduDeviceManager.yonduDeviceRemoved("Yondu Device 1");
             _streamManager.Dispose();
         }
 

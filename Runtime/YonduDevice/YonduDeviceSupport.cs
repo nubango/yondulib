@@ -64,5 +64,10 @@ namespace YonduLibDevice
 
             YonduDeviceManager.yonduDeviceAdded("Yondu Device 1");
         }
+
+        private void OnDestroy()
+        {
+            YonduDeviceManager.yonduDeviceRemoved("Yondu Device 1");
+        }
     }
 }

@@ -6,30 +6,17 @@ using UnityEngine.UI;
 using YonduLib.Recognizers;
 using Unity.Collections;
 using YonduLib.Core.Driver;
-/*
-IMPORTANTE:
 
-  El funcionamiento debe ser como un joystick que se mueve en una sola direccion, 
-  puede estar quieto en el centro (no se silba), puede estar arriba (silbido agudo)
-  o puede estar abajo (silbido grave) y debe de estar mandando eventos constantemente 
-  mientras se detecte dicha frecuencia. 
- */
-
-/*
-Al generar el evento recogemos la mayor cantidad de parámetros y mas arriba decidiran que valor tener en cuenta 
-- Silbido: intensidad y frecuencia (TODO: si silbas de seguido mucho tiempo se generan muchos eventos)
-- Chasquido: intensidad
-*/
-
-/*
- YondulibManager tambien se encarga de añadir un dispositivo al inputSystem de tipo MyDevice. 
- Ahora lo añadimos de forma manual desde el editor. Si no lo añadimos da error al intentar crear el evento correspondiente
- */
 
 namespace YonduLib
 {
     /*
      * Clase que se encarga de gestionar los SoundRecognizers y les proporciona el array de frecuencias a cada uno
+     * 
+     * Guarda el stream de datos
+     * 
+     * Gestiona la representación gráfica de los reconocedores (medidores)
+     * 
      * **/
     public class YondulibManager : MonoBehaviour
     {

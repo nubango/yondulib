@@ -75,9 +75,6 @@ namespace YonduLib.Recognizers
 
         #region PUBLIC_METHODS
 
-        // devuelve la maxima frecuencia encontrada al analizar el espectro
-        //private float GetMaxFrequency() { return maxFrequency.frequency; }
-
         // trata de reconocer el evento que le corresponda y devuelve el porcentaje de reconocimiento
         public float Recognize(float[] array)
         {
@@ -125,7 +122,7 @@ namespace YonduLib.Recognizers
                 _eventRecording = false;
                 _eventFrequency = -1;
 
-                Debug.Log("Silencio");
+                //Debug.Log("Silencio");
 
                 // generamos el evento de release 
                 //name = EventName.Silence;
@@ -160,7 +157,7 @@ namespace YonduLib.Recognizers
                 //else
                 //    freq = 1;
 
-                Debug.Log(name.ToString() + " " + freq);
+                //Debug.Log(name.ToString() + " " + freq);
                 EnqueueEvent(freq, array.Length);
             }
 
@@ -320,42 +317,8 @@ namespace YonduLib.Recognizers
 
                 InputSystem.QueueDeltaStateEvent(YonduLibDevice.YonduDevice.current.whistle, new Vector2(x, y));
 
-                Debug.Log(x + " - " + y);
+                //Debug.Log(x + " - " + y);
             }
-
-
-
-
-            //if (name == EventName.Whistle && dataEvent <= 1)
-            //{
-            //    InputSystem.QueueDeltaStateEvent(YonduLibDevice.YonduDevice.current.whistle, new Vector2(0f, 0f));
-            //    return;
-            //}
-            //else if (name == EventName.Click && dataEvent <= 0)
-            //{
-            //    InputSystem.QueueDeltaStateEvent(YonduLibDevice.YonduDevice.current.click, false);
-            //}
-
-
-            //if (name == EventName.Whistle)
-            //{
-            //    float x, y = 1, z = 0.2f * length;
-
-            //    if (dataEvent > z)
-            //    {
-            //        x = (dataEvent - z) / z;
-            //    }
-            //    else
-            //    {
-            //        x = (dataEvent / z) - 1;
-            //    }
-
-            //    InputSystem.QueueDeltaStateEvent(YonduLibDevice.YonduDevice.current.whistle, new Vector2(x, y));
-
-            //    Debug.Log(x + " - " + y);
-            //}
-            //else if (name == EventName.Click)
-            //    InputSystem.QueueDeltaStateEvent(YonduLibDevice.YonduDevice.current.click, true);
         }
     }
     #endregion

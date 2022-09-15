@@ -17,10 +17,6 @@ namespace YonduLib.Recognizers
         }
 
         /*
-        * ventana deslizante: https://stackoverflow.com/questions/8269916/what-is-sliding-window-algorithm-examples
-        **/
-
-        /*
         TODO: Mejorar el reconocimiento de silbidos configurando los valores 
         de los distintos parámetros en funcion de la frecuencia a la que se silbe. 
         Actualmente se reconocen mejor los silbidos agudos que los graves
